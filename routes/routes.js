@@ -56,7 +56,7 @@ appRouter.route("/login").post(async function (req, response) {
 
   const db_password = results[0].password;
   if (db_password == loginCredentials.password) {
-    req.session.userId = user._id;
+    req.session.userId = results._id;
     response.send("logged in!");
   } else {
     response.send("email or/and password is incorrect!");
