@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "keen-vial-407222",
+  "private_key_id": "cb9490b288b9ee541d87c0b7b45d0059b78b2e43",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCIjFBMUZi71fyX\n2KfcZTWU3yNngl5bV/dNAVyBA6nsRqIgxjAkCv2iJin5foOD4TAhM9WrGknzmvgp\nTFBCcAVaGucOQ6w0SL/FW1mnYu/mkBI6ToSszZc9J2PpdXWuFXTumbtaCYa5PLMj\n0otf9ckF1VthYgcnzbpHXRwAeC2yXbqicZLelgION8Y/DDpNOzEuE5RqTu48VK0+\nlfRuixXi5wzJBCjJEcypawdzLQn90DgLrXnD55STGLnwkvuF2CZC2Z8xfqZC00DN\nJKpYBLtlRcALn+bSddS2+G/hh7FC0g2oFFvHqZal/BHNatBvVh87V1C5wO/xZatI\ngRdZl8sXAgMBAAECggEAFkbuAsV9KYfrwcoy+J36c+NDn2uBgV2ElyeVs+apHkcX\nxEkRKZAxePbI+k9NnYJrm78dKOENF5U8z2AH6A7mkKC6+XTI726++q/AnLJjeTYg\nAys0Mg0Ik42Nm1TycghGH3ctPa84L5hbkYiT/H/Y3/7C/cxEZpYFwgbKvrjcm7C5\n8pgF8ocKlwqETHf+Eb54u4GlVoMFR0WJ4AX1Nicz9HgEe1tfKOiin8LJMa/+4pBb\ntpNoa9cFVYwhYn+kYtPPdvWnQh7HYrzox25hD5W9kWeeYex4mC2k2R1QaQY3s13H\n109OhNcXQypGhdnjztckdbR7YO5fkHjZqkgfqU10gQKBgQC+Cok2C1auFsIh/AFI\nMjpekFVAsQhD9ZyO4KsgNSm4nfug+rLp1PC6iqFzQUouS64ha8D9AumNkEfGtvhT\nFsVQHBmAApSPIhgLUAqP0szRSKVhAte6GDfkIEySIqc8DebkJ5fCC9zCyPS7daHR\n81VUl6uedOHrJVvqV2vbFVKvMQKBgQC38NVKeLf5geuNrxE0uLpGW5p85vNxnqqu\n2ajP6WZ8TrBnCENk9/cJrsupu3uaB8WdBOOav6oyw/RQ09592gv7Vy9CuGUfO3Hb\n1mHTUHn4Tn7bHluzLTYP1xMSjlpb4oTM3R6CEwKmOL3vYmfv0E7c6V7cYAdTvcIQ\njKulxhxcxwKBgBZz6jgvaMNSvwcC3ifof0ry5I+rGt3ko+Whl7ZLca11ROiFFiRY\nW0S+4kpauWf02xLpxzhdYriuBjztGzO96fwIBd9A7spmbc7QWx8Y+cf0PE3U5yX+\nfIQAaOuPGpEW12O3Zc+wVRnSYk/PmxnSFQ/Uh5tGFfcRR+XNBFozD7zRAoGBAIA0\ntYWNtLWMz5DWmAiGRRdrG7e5Ba+I5vCuNxKLXOqBskRuJwNGLgKqubuZOKJ4jk1O\nLhIbS1bM7Ao2Ulqn0zghYYiAm8L0HP0cZNzzt7/Rfmvdsg6mEYti3iFN5T8sGGHu\nMSh6dZtD62bh0Q3+xCkH5B14NUMx/QSp96248uXbAoGAXJI4vrLNUtiKTuI3D23B\n1G076gSEJ6x4d70rA+cDJUWA16etAO0dGgHEEHhc0n0AAT09Nopb6BV3H3ebPLg5\nf32sUIipVX6zI3qKI62mFnsnI6uku2Ahqyh4rpHPND5Q7JVbjDpmgUj4pipPG0yb\n/NE97rgup9oYjcexUAuH/CU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "goodfortune@keen-vial-407222.iam.gserviceaccount.com",
+  "client_id": "116751364447093517469",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/goodfortune%40keen-vial-407222.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
