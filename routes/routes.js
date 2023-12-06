@@ -1,7 +1,7 @@
 const express = require("express");
 //const session = require("express-session");
 // const bcrypt = require('bcrypt');
-// const { ObjectId } = require("mongodb");
+const { ObjectId } = require("mongodb");
 // const multer = require("multer");
 // // const { Storage } = require("@google-cloud/storage");
 // import MulterGoogleCloudStorage from "multer-cloud-storage";
@@ -128,7 +128,6 @@ appRouter.route("/settings").put(async function (req, response) {
     pronoun: req.body.pronoun,
   };
 
-  // console.log(userChange);
   // Check if an image file was uploaded
   if (req.file) {
     const imagePath = req.file.path; // This is the path to the saved image file
@@ -136,22 +135,6 @@ appRouter.route("/settings").put(async function (req, response) {
   }
 
   const userIdentifier = { _id: new ObjectId(userId) }; // Using ObjectId for MongoDB
-
-  // const res = await db_connect
-  //   .collection("user_account")
-  //   .updateOne(userIdentifier, { $set: userChange }, async function (err, res) {
-  //     if (err) {
-  //       response.status(500).send("Error updating user data: " + err.message);
-  //       return();
-  //     }
-  //     console.log("Updated data");
-  //     response.json(res);
-  //   });
-
-  // const results = await db_connect
-  //   .collection("user_account")
-  //   .updateOne(userIdentifier, { $set: userChange });
-  // response.json(results);
 
   try {
     const results = await db_connect
