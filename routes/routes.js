@@ -47,16 +47,16 @@ appRouter.route("/login").post(async function (req, response) {
   console.log(loginCredentials);
 
   var email = { email: loginCredentials.email };
-  const results = await db_connect
+  // Find the user by email
+  const user = await db_connect
     .collection("user_account")
-    .find(email, { _id: 0, password: 1 })
-    .toArray();
+    .findOne({ email: loginCredentials.email });
 
   console.log(results);
 
-  const db_password = results[0].password;
-  if (db_password == loginCredentials.password) {
-    req.session.userId = results._id;
+  if (user && user.password === loginCredentials.password) {
+    // Set user ID in the session
+    req.session.userId = user._id;
     response.send("logged in!");
   } else {
     response.send("email or/and password is incorrect!");
