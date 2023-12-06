@@ -79,40 +79,40 @@ appRouter.route("/register").post(async function (req, response) {
   response.json(results);
 });
 
-appRouter
-  .route("/upload")
-  .post(upload.single("image"), async function (req, res) {
-    if (req.file) {
-      const fileUrl = `https://storage.googleapis.com/${req.file.bucket}/${req.file.filename}`;
+// appRouter
+//   .route("/upload")
+//   .post(upload.single("image"), async function (req, res) {
+//     if (req.file) {
+//       const fileUrl = `https://storage.googleapis.com/${req.file.bucket}/${req.file.filename}`;
 
-      // Assuming the userId is sent in the request body or query. Modify as needed.
-      const userId = req.body.userId || req.query.userId;
-      if (!userId) {
-        return res.status(400).send("User ID is required.");
-      }
+//       // Assuming the userId is sent in the request body or query. Modify as needed.
+//       const userId = req.body.userId || req.query.userId;
+//       if (!userId) {
+//         return res.status(400).send("User ID is required.");
+//       }
 
-      let db_connect = dbo.getDb();
-      const userIdentifier = { _id: new ObjectId(userId) };
+//       let db_connect = dbo.getDb();
+//       const userIdentifier = { _id: new ObjectId(userId) };
 
-      try {
-        // Update the imageUrl field in the user_account collection
-        await db_connect
-          .collection("user_account")
-          .updateOne(userIdentifier, { $set: { imageUrl: fileUrl } });
+//       try {
+//         // Update the imageUrl field in the user_account collection
+//         await db_connect
+//           .collection("user_account")
+//           .updateOne(userIdentifier, { $set: { imageUrl: fileUrl } });
 
-        res.json({
-          message: "File uploaded and user image updated successfully",
-          fileUrl: fileUrl,
-        });
-      } catch (error) {
-        res
-          .status(500)
-          .send("Error updating user image in database: " + error.message);
-      }
-    } else {
-      res.status(400).send("No file uploaded.");
-    }
-  });
+//         res.json({
+//           message: "File uploaded and user image updated successfully",
+//           fileUrl: fileUrl,
+//         });
+//       } catch (error) {
+//         res
+//           .status(500)
+//           .send("Error updating user image in database: " + error.message);
+//       }
+//     } else {
+//       res.status(400).send("No file uploaded.");
+//     }
+//   });
 
 appRouter.route("/settings").put(async function (req, response) {
   let db_connect = dbo.getDb();
