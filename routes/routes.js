@@ -52,8 +52,6 @@ appRouter.route("/login").post(async function (req, response) {
     .collection("user_account")
     .findOne({ email: loginCredentials.email });
 
-  console.log(results);
-
   if (user && user.password === loginCredentials.password) {
     // Set user ID in the session
     req.session.userId = user._id;
