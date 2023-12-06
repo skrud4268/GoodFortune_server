@@ -56,6 +56,7 @@ appRouter.route("/login").post(async function (req, response) {
 
   const db_password = results[0].password;
   if (db_password == loginCredentials.password) {
+    req.session.userId = user._id;
     response.send("logged in!");
   } else {
     response.send("email or/and password is incorrect!");
@@ -117,7 +118,7 @@ appRouter.route("/register").post(async function (req, response) {
 appRouter.route("/settings").put(async function (req, response) {
   let db_connect = dbo.getDb();
   console.log("Request body:", req.body);
-  let userId = req.body.userId;
+  let userId = req.session.userId;
   let userChange = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -166,7 +167,7 @@ appRouter.route("/firstuserinfo").get(async (req, response) => {
   try {
     const firstDocument = await db_connect
       .collection("user_account")
-      .findOne({}); // Fetches the first document from 'user_account' collection
+      .findOne({ _id: new ObjectId(req.session.userId) }); // Fetches the first document from 'user_account' collection
     console.log("Retrieved userId:", firstDocument._id);
     response.json(firstDocument);
   } catch (error) {
