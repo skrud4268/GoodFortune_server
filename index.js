@@ -6,6 +6,14 @@ const cors = require("cors");
 
 require("dotenv").config({ path: "./config.env" });
 
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET, // Using the secret from the environment variable
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
 const port = process.env.PORT || 5050;
 app.use(cors());
 app.use(express.json());
@@ -15,14 +23,6 @@ app.use(require("./routes/routes"));
 //app.use(express.urlencoded({ limit: "50mb", extended: true }));
 // get driver connection
 //const dbo = require("./database/conn");
-
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET, // Using the secret from the environment variable
-    resave: false,
-    saveUninitialized: true,
-  })
-);
 
 app.listen(port, () => {
   // perform a database connection when server starts
