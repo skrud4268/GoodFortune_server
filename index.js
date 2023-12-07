@@ -1,18 +1,18 @@
 const express = require("express");
-const session = require("express-session");
+// const session = require("express-session");
 const app = express();
 
 const cors = require("cors");
 
-require("dotenv").config({ path: "./config.env" });
+// require("dotenv").config({ path: "./config.env" });
 
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET, // Using the secret from the environment variable
-    resave: false,
-    saveUninitialized: true,
-  })
-);
+// app.use(
+//   session({
+//     secret: process.env.SESSION_SECRET, // Using the secret from the environment variable
+//     resave: false,
+//     saveUninitialized: true,
+//   })
+// );
 
 const port = process.env.PORT || 5050;
 app.use(cors());
