@@ -53,8 +53,6 @@ appRouter.route("/login").post(async function (req, response) {
     .findOne({ email: loginCredentials.email });
 
   if (user && user.password === loginCredentials.password) {
-    // Set user ID in the session
-    req.session.userId = user._id;
     response.send("logged in!");
   } else {
     response.send("email or/and password is incorrect!");
@@ -165,7 +163,7 @@ appRouter.route("/firstuserinfo").get(async (req, response) => {
   try {
     const firstDocument = await db_connect
       .collection("user_account")
-      .findOne({ _id: new ObjectId(req.session.userId) }); // Fetches the first document from 'user_account' collection
+      .findOne({}); // Fetches the first document from 'user_account' collection
     console.log("Retrieved userId:", firstDocument._id);
     response.json(firstDocument);
   } catch (error) {
